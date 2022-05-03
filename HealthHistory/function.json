@@ -1,0 +1,44 @@
+{
+   "bindings": [
+    {
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "post",
+        "get"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "in",
+      "name": "allHistory",
+      "databaseName": "ContosoHealthcheck",
+      "collectionName": "Submissions",
+      "connectionStringSetting": "COSMOSDB_PRIMARY_CONNECTION_STRING",
+      "sqlQuery": "SELECT * FROM g where ppt_id =  {userId}"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "in",
+      "name": "historyBySubmissionID",
+      "databaseName": "ContosoHealthcheck",
+      "collectionName": "Submissions",
+      "connectionStringSetting": "COSMOSDB_PRIMARY_CONNECTION_STRING",
+      "sqlQuery": "SELECT * FROM g where submissionId = {submissionId} and userId = {userId}"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "updateSubmission",
+      "databaseName": "ContosoHealthcheck",
+      "collectionName": "Submissions",
+      "connectionStringSetting": "COSMOSDB_PRIMARY_CONNECTION_STRING"
+    }
+  ]
+}
