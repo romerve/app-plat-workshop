@@ -1,0 +1,12 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+        "FUNCTIONS_WORKER_RUNTIME": "node",
+        "AzureWebJobsStorage": "",
+        "COSMOSDB_PRIMARY_CONNECTION_STRING": "AccountEndpoint=https://wolfpack-team3.documents.azure.com:443/;AccountKey=4oY7EWMGHUBgA9qQYFYhlF9NMWMhRK9ucGwo8Z0X140iagXHzPgKpJ9Hfg460cGinHbjfg3Hj422W0M9RVVVNQ==;",
+        "AzureWebJobs.assessment-single-get.Disabled": "true"
+    },
+    "Host": {
+        "CORS": "*"
+    }
+}
